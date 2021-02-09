@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class = "over-view">
+    <div class = "head" id = "profi">
+        <img src="{{ url_for('static', filename='imgs/pelican.jpg') }}" height="170" width="180">
+        <h1>{{name}}</h1>
+        <p>@{{usrname}}</p>
+        <p>{{address}}</p>
+        <p>Joined {{date_join}}</p>
+    </div>
+
+    <div class = "base" id = "profi1">
+        <p class = "about">{{abt}} </p> 
+        <table>
+            <tr>
+              <th>{{posts}}</th>
+              <th>{{fol}}</th> 
+              <th>{{folrs}}</th>
+            </tr>
+            <tr>
+              <td>Posts</td>
+              <td>Following</td>
+              <td>Followers</td>
+            </tr>
+        </table>
+
+        <div class = "result">
+
+        </div>
+        <button type="submit" class = "button">
+            Follow
+        </button>
+    </div>
+
+    
+</div>
+{% endblock %}

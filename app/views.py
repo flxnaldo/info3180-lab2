@@ -7,6 +7,13 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
+
+def format_date_joined(year,month,day):
+    date_joined = datetime.date(year, month, day)
+    ## Format the date to return only month and year date
+    monthYear = date_joined.strftime("%B, %Y")
+    return monthYear
 
 
 ###
@@ -22,8 +29,12 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Arnoldo Daley")
 
+@app.route('/profile')
+def profile():
+    """Render the website's profile page."""
+    return render_template('profile.html', name="Arnoldo Daley", usrname="flxnaldo", address="Kingston, Jamaica", abt = "A student of The University of The West Indies, Mona. I enjoy web design, coding and aviation. I hope that at the end of my university experience, I will have a meaningful career that sounds my prior mentioned passions.", date_join = format_date_joined(2021,2,14), posts = 144, fol = 720, folrs = 1080)
 
 ###
 # The functions below should be applicable to all Flask apps.
