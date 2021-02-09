@@ -34,7 +34,7 @@ def about():
 @app.route('/profile')
 def profile():
     """Render the website's profile page."""
-    return render_template('profile.html', name="Arnoldo Daley", usrname="flxnaldo", address="Kingston, Jamaica", abt = "A student of The University of The West Indies, Mona. I enjoy web design, coding and aviation. I hope that at the end of my university experience, I will have a meaningful career that sounds my prior mentioned passions.", date_join = format_date_joined(2021,2,14), posts = 144, fol = 720, folrs = 1080)
+    return render_template('profile.html', name="Arnoldo Daley", usrname="flxnaldo", address="Kingston, Jamaica", abt = "A student of The University of The West Indies, Mona. I enjoy web design, coding and aviation. I hope that at the end of my university experience, I will have a meaningful career that surrounds my prior mentioned passions.", date_join = format_date_joined(2021,2,14), posts = 144, fol = 720, folrs = 1080)
 
 ###
 # The functions below should be applicable to all Flask apps.
